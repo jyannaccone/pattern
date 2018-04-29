@@ -16,12 +16,10 @@
  */
 package net.yannaccone.pattern.reflector;
 
-import net.yannaccone.commons.exception.CommonsException;
-
 /**
  * An exception indicating that a requested item was not found.
  */
-public class ReflectorException extends CommonsException {
+public class ReflectorException extends Exception {
 
 	/**
 	 * 

@@ -16,12 +16,10 @@
  */
 package net.yannaccone.pattern.factory;
 
-import net.yannaccone.commons.exception.CommonsException;
-
 /**
  * An exception indicating that a requested item was not found.
  */
-public class ConfigurationException extends CommonsException {
+public class ConfigurationException extends Exception {
 
 	/**
 	 * 
