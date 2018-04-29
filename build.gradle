@@ -1,0 +1,75 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+group = 'net.yannaccone'
+version = '0.0.1'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+configurations {
+    all*.exclude module: 'slf4j-log4j12'
+}
+
+sourceSets {
+
+  // a custom sourceSet for license files that will need to be included
+  // in the jar
+  license {
+    resources {
+      srcDirs "${projectDir}"
+      include "LICENSE"
+      include "NOTICE"
+    }
+  }
+
+	test {
+		java {
+		 	// Files and directories listed here will be
+		 	// excluded from the test sourceSet.  They will
+		 	// not be compiled or executed.
+//			exclude '**/MyTest.*'
+		}
+	}
+}
+
+// Add the license.resources sourceSet to the jar
+jar {
+  from sourceSets.license.resources
+}
+
+dependencies {
+	compile 'org.slf4j:slf4j-api:1.7.7'
+	compile 'org.slf4j:log4j-over-slf4j:1.7.7'
+	compile 'ch.qos.logback:logback-core:1.2.2'
+	compile 'ch.qos.logback:logback-classic:1.2.2'
+
+//	compile 'commons-cli:commons-cli:1.3.1'
+	compile 'commons-codec:commons-codec:1.10'
+	compile 'org.apache.commons:commons-io:1.3.2'
+	compile 'org.apache.commons:commons-lang3:3.5'
+	compile 'org.apache.commons:commons-compress:1.13'
+	compile 'org.apache.commons:commons-vfs2:2.1'
+
+	compile 'com.fasterxml.jackson.core:jackson-core:2.8.2'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.2'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.8.2'
+	
+	compile 'org.reflections:reflections:0.9.9-RC1'
+	
+	testCompile 'junit:junit:4.11'
+}
+
+test {
+	testLogging.showStandardStreams = true
+
+	// Tests to exclude
+//	exclude '**/MyTest.*'
+}
+
+javadoc {
+  options.memberLevel = JavadocMemberLevel.PACKAGE
+}

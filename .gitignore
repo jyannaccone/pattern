@@ -1,0 +1,16 @@
+/build/
+/bin/
+/target/
+/test/
+.DS_Store
+.classpath
+.gradle
+.project
+.maven
+.settings
+.launch
+.externalToolBuilders
+*.tmp
+*.bak
+*.swp
+
