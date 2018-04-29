@@ -14,22 +14,37 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package net.yannaccone.commons.factory;
+package net.yannaccone.pattern.factory;
+
+import java.util.Properties;
 
 /**
- * An interface that must be implemented by types that will be instantiated
- * using the ConfigurableFactory interface.
+ * A Properties class that implementation Configuration so it can be used as
+ * the configuration object for a Configurable implementation by
+ * ConfigurableFactory.
  */
-public interface Configurable<T1 extends Configuration> {
-  
+public class PropertiesConfiguration extends Properties implements Configuration {
+
   /**
-   * Configure the instance using attributes contained within the configuration
-   * parameter.
    * 
-   * @param configuration The configuration parameter.
-   * @throws ConfigurationException is the Configurable instance is unable to
-   *         configure itself using the provided Configuration parameter.
    */
-  void configure(T1 configuration) throws ConfigurationException;
+  private static final long serialVersionUID = 1L;
+
+  /**
+   * Create a new instance of PropertiesConfiguration with no default
+   * properties.
+   */
+  public PropertiesConfiguration() {
+  }
+
+  /**
+   * Create a new instance of PropertiesConfiguration using the provided
+   * defaults Properties as the default property values.
+   * 
+   * @param defaults the default Properties to set
+   */
+  public PropertiesConfiguration(Properties defaults) {
+    super(defaults);
+  }
 
 }

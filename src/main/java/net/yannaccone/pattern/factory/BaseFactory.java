@@ -14,16 +14,16 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package net.yannaccone.commons.factory;
+package net.yannaccone.pattern.factory;
 
 import java.lang.annotation.Annotation;
 import java.util.Collection;
 
-import net.yannaccone.commons.reflector.Reflector;
+import net.yannaccone.pattern.reflector.Reflector;
 
 /**
  * A base implementation of the Factory interface that uses
- * {@link net.yannaccone.commons.reflector.Reflector Reflector} to scan for a
+ * {@link net.yannaccone.pattern.reflector.Reflector Reflector} to scan for a
  * user specified implementation of a base type and creates a new instance of
  * that implementation.
  * <p>
@@ -37,7 +37,7 @@ public abstract class BaseFactory<T1, T2 extends Annotation>
   /**
    * Constructs a new BaseFactory that will scan for implementation classes
    * within the default reflectorPackage. See
-   * {@link net.yannaccone.commons.reflector.Reflector Reflector} for more
+   * {@link net.yannaccone.pattern.reflector.Reflector Reflector} for more
    * information regarding the default reflectorPackage.
    */
   public BaseFactory() {
@@ -62,7 +62,7 @@ public abstract class BaseFactory<T1, T2 extends Annotation>
   }
 
   /* (non-Javadoc)
-   * @see net.yannaccone.commons.factory.Factory#create(java.lang.String)
+   * @see net.yannaccone.pattern.factory.Factory#create(java.lang.String)
    */
   @Override
   public T1 create(String type) throws FactoryException {

@@ -14,14 +14,14 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package net.yannaccone.commons.factory;
+package net.yannaccone.pattern.factory;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import net.yannaccone.commons.factory.Configuration;
+import net.yannaccone.pattern.factory.Configuration;
 
 /**
  * A Configuration implementation that stores configuration parameters as a

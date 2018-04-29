@@ -14,7 +14,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package net.yannaccone.commons.factory;
+package net.yannaccone.pattern.factory;
 
 import net.yannaccone.commons.exception.CommonsException;
 

@@ -19,4 +19,4 @@
  * <a href="https://github.com/ronmamo/reflections">Reflections</a> library to
  * locate and return annotated classes.
  */
-package net.yannaccone.commons.reflector;
+package net.yannaccone.pattern.reflector;

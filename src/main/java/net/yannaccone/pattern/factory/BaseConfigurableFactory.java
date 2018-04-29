@@ -14,13 +14,13 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package net.yannaccone.commons.factory;
+package net.yannaccone.pattern.factory;
 
 import java.lang.annotation.Annotation;
 
 /**
  * A base implementation of the ConfigurableFactory interface that uses
- * {@link net.yannaccone.commons.reflector.Reflector Reflector} to scan for a
+ * {@link net.yannaccone.pattern.reflector.Reflector Reflector} to scan for a
  * user specified implementation of a base type, creates a new instance of
  * that implementation, and configured the new instance using a provided
  * Configuration implementation.  The base type must implement the
@@ -37,7 +37,7 @@ public abstract class BaseConfigurableFactory<T1 extends Configurable<T3>,
   /**
    * Constructs a new BaseConfigurableFactory that will search for
    * implementation classes within the default reflectorNamespace.
-   * See {@link net.yannaccone.commons.reflector.Reflector Reflector}
+   * See {@link net.yannaccone.pattern.reflector.Reflector Reflector}
    * for more information regarding the default namespace.
    */
   public BaseConfigurableFactory() {
@@ -57,7 +57,7 @@ public abstract class BaseConfigurableFactory<T1 extends Configurable<T3>,
   }
 
   /* (non-Javadoc)
-   * @see net.yannaccone.commons.factory.ConfigurableFactory#create(java.lang.String, net.yannaccone.commons.factory.Configuration)
+   * @see net.yannaccone.pattern.factory.ConfigurableFactory#create(java.lang.String, net.yannaccone.pattern.factory.Configuration)
    */
   @Override
   public T1 create(String type, T3 configuration) throws FactoryException,

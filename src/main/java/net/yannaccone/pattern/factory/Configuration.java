@@ -14,7 +14,12 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
+package net.yannaccone.pattern.factory;
+
 /**
- * A generalized abstract factory pattern implementation.
+ * An interface that must be implemented by a class that will be used to
+ * configure a class that implements Configurable.
  */
-package net.yannaccone.commons.factory;
+public interface Configuration {
+
+}
