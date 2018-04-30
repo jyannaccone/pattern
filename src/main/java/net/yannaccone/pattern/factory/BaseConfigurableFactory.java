@@ -22,7 +22,7 @@ import java.lang.annotation.Annotation;
  * A base implementation of the ConfigurableFactory interface that uses
  * {@link net.yannaccone.pattern.reflector.Reflector Reflector} to scan for a
  * user specified implementation of a base type, creates a new instance of
- * that implementation, and configured the new instance using a provided
+ * that implementation, and configures the new instance using a provided
  * Configuration implementation.  The base type must implement the
  * Configurable interface.
  * <p>

@@ -17,7 +17,8 @@
 package net.yannaccone.pattern.factory;
 
 /**
- * An exception indicating that a requested item was not found.
+ * An exception indicating that an error occured while attempting to apply a
+ * Configuration to a Configurable.
  */
 public class ConfigurationException extends Exception {
 

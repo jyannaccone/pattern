@@ -19,8 +19,8 @@ package net.yannaccone.pattern.factory;
 import java.util.Properties;
 
 /**
- * A Properties class that implementation Configuration so it can be used as
- * the configuration object for a Configurable implementation by
+ * A Properties subclass that implements Configuration so it can be used as the
+ * configuration object for a Configurable implementation by
  * ConfigurableFactory.
  */
 public class PropertiesConfiguration extends Properties implements Configuration {
