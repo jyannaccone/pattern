@@ -3,7 +3,6 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 group = 'net.yannaccone'
-version = 'SNAPSHOT'
 
 repositories {
 	mavenCentral()
