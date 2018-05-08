@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-group = 'com.github.jyannaccone'
+group = 'net.yannaccone'
 
 repositories {
 	mavenCentral()
